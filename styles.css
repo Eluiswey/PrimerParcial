@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.15);
+}
+
+@media (min-width: 768px) {
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(255, 107, 53, 0.2);
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+@media (min-width: 768px) {
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+    }
+}
+
+.btn-secondary {
+    background: #ffffff;
+    color: #ff6b35;
+    border: 2px solid #ff6b35;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: #ff6b35;
+    color: #ffffff;
+}
+
+.modal-backdrop {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.text-primary {
+    color: #ff6b35;
+}
+
+.border-primary {
+    border-color: #ff6b35;
+}
+
+.bg-primary {
+    background-color: #ff6b35;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero-gradient h1 {
+        line-height: 1.2;
+    }
+    
+    .modal-backdrop .bg-white {
+        margin: 0.5rem;
+    }
+}
+
+/* Touch targets for mobile */
+@media (max-width: 768px) {
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.75rem 1rem;
+    }
+}
